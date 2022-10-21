@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+
+        .gridbox {
+            position: fixed;
+            border: 2px solid black;
+
+            left: 500px;
+            box-shadow: 0px 0px 10px gray;
+            width: 600px;
+            height: 300px;
+            text-align: center;
+
+            background-color: khaki;
+
+        }
+
+        .heading {
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border-bottom: 1px solid black;
+            text-align: center;
+
+        }
+
+        #headbig {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 60px;
+            padding-top: 30px;
+
+        }
+    </style>
+    <script>
+        function dumm() {
+
+            str1 = document.getElementById("id001").value;
+
+            var my = 0;
+            while (str1 > 0) {
+                my = (my) + str1 % 10;
+                str1 = (Math.floor(str1 / 10));
+                
+
+
+            } console.log(my);
+            str2 = document.getElementById("demopara").innerHTML = my;
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="headbig">Sum of the digit </h1>
+    <div class="gridbox">
+        <h3 class="heading">TRY IT YOURSELF</h3>
+        <label style="color:brown; ">Enter a number</label>
+        <input type="text"
+            style="width: 200px; height: 20px;border:none; background-color: darkgray; border-bottom: 2px solid black;"
+            id="id001"><br><br>
+        <button type="button" style="background-color: cornflowerblue; width:100px;height: 30px; border-radius: 10px;"
+            onclick="dumm()">Sum</button>
+        <p id="demopara" style="font-size: 50px;"></p>
+    </div>
+</body>
+
+</html>
